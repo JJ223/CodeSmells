@@ -40,8 +40,8 @@ public class ContactBookInList implements ContactBook {
     @Override
     public void deleteContact(String name) throws ContactDoesNotExistException {
         // A possible alternative would be:
-        // Contact c = this.getContact(name);
-        // contacts.remove(c);
+        // getting the object contact from the list and
+        // then removing it from the list
         // but this requires two searches in the list.
         // The following solution requires an equals(Object o) method
         // implemented in the ContactClass and a constructor that receives the name
