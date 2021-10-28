@@ -1,4 +1,4 @@
-package cBook;
+package cbook;
 
 /**
  * By removing the public visibility, this class is no longer visible outside the package
@@ -61,6 +61,7 @@ class ContactClass implements Contact {
         this.email = email;
     }
 
+    @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
 
@@ -76,5 +77,6 @@ class ContactClass implements Contact {
         }
         return name.equals(other.getName());
     }
+
 
 }

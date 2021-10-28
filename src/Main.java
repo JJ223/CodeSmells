@@ -1,9 +1,9 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import cBook.Contact;
-import cBook.ContactBook;
-import cBook.ContactBookInList;
+import cbook.Contact;
+import cbook.ContactBook;
+import cbook.ContactBookInList;
 import exceptions.ContactAlreadyExistsException;
 import exceptions.ContactDoesNotExistException;
 

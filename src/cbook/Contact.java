@@ -1,4 +1,4 @@
-package cBook;
+package cbook;
 
 public interface Contact {
     /**

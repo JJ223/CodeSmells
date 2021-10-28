@@ -1,4 +1,4 @@
-package cBook;
+package cbook;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -90,8 +90,8 @@ public class ContactBookInList implements ContactBook {
 
     /**
      * @param name The contact name to lookup in the list
-     * @return the <code>name</code> of the contact, if it exists,
-     * otherwise <code>null</code>
+     * @return the contact with the given name if it exists,
+     * otherwise null
      */
     private Contact getContact(String name) {
         for (Contact c: contacts)
