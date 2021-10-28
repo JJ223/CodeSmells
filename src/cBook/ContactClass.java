@@ -61,7 +61,6 @@ class ContactClass implements Contact {
         this.email = email;
     }
 
-    @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
 
