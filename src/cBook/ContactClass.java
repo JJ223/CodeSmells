@@ -7,7 +7,7 @@ public class ContactClass implements Contact {
     /**
      * Contact name.
      */
-    private String name;
+    private final String name;
 
     /**
      * Contact phone number.
