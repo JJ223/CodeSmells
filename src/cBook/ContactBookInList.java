@@ -16,7 +16,7 @@ public class ContactBookInList implements ContactBook {
      * Default constructor
      */
     public ContactBookInList() {
-        contacts = new LinkedList<Contact>();
+        contacts = new LinkedList<>();
     }
 
     @Override
@@ -49,32 +49,36 @@ public class ContactBookInList implements ContactBook {
 
     @Override
     public int getPhone(String name) throws ContactDoesNotExistException {
-        if (has_Contact(name))
-            return this.getContact(name).getPhone();
+        Contact c = this.getContact(name);
+        if (c != null)
+            return c.getPhone();
         else
             throw new ContactDoesNotExistException();
     }
 
     @Override
     public String getEmail(String name) throws ContactDoesNotExistException {
-        if (has_Contact(name))
-            return this.getContact(name).getEmail();
+        Contact c = this.getContact(name);
+        if (c != null)
+            return c.getEmail();
         else
             throw new ContactDoesNotExistException();
     }
 
     @Override
     public void setPhone(String name, int phone) throws ContactDoesNotExistException {
-        if (has_Contact(name))
-            this.getContact(name).setPhone(phone);
+        Contact c = this.getContact(name);
+        if (c != null)
+            c.setPhone(phone);
         else
             throw new ContactDoesNotExistException();
     }
 
     @Override
     public void setEmail(String name, String email) throws ContactDoesNotExistException {
-        if (has_Contact(name))
-            this.getContact(name).setEmail(email);
+        Contact c = this.getContact(name);
+        if (c != null)
+            c.setEmail(email);
         else
             throw new ContactDoesNotExistException();
     }
