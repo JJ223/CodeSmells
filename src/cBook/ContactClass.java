@@ -17,7 +17,7 @@ class ContactClass implements Contact {
     /**
      * Contact the email address.
      */
-    public String email;
+    private String email;
 
     /**
      * Default constructor
