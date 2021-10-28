@@ -71,10 +71,8 @@ class ContactClass implements Contact {
 
         Contact other = (Contact) obj;
 
-        if (name == null) {
-            if (other.getName() != null) return false;
-            return true;
-        }
+        if (name == null) return other.getName() == null;
+   
         return name.equals(other.getName());
     }
 
