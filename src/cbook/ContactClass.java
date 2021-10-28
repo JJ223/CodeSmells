@@ -1,4 +1,4 @@
-package cBook;
+package cbook;
 
 /**
  * By removing the public visibility, this class is no longer visible outside the package
@@ -73,9 +73,9 @@ class ContactClass implements Contact {
 
         if (name == null) {
             if (other.getName() != null) return false;
-            else return true;
+            return true;
         }
-        else return name.equals(other.getName());
+        return name.equals(other.getName());
     }
 
 

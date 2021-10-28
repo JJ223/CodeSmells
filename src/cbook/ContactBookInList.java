@@ -1,4 +1,4 @@
-package cBook;
+package cbook;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -16,7 +16,7 @@ public class ContactBookInList implements ContactBook {
      * Default constructor
      */
     public ContactBookInList() {
-        contacts = new LinkedList<Contact>();
+        contacts = new LinkedList<>();
     }
 
     @Override
@@ -39,40 +39,46 @@ public class ContactBookInList implements ContactBook {
 
     @Override
     public void deleteContact(String name) throws ContactDoesNotExistException {
-        if (has_Contact(name))
-            contacts.remove(new ContactClass(name));
-        else
+        if (has_Contact(name)) {
+            Contact c = this.getContact(name);
+            contacts.remove(c);
+        } else {
             throw new ContactDoesNotExistException();
+        }
     }
 
     @Override
     public int getPhone(String name) throws ContactDoesNotExistException {
-        if (has_Contact(name))
-            return this.getContact(name).getPhone();
+        Contact c = this.getContact(name);
+        if (c != null)
+            return c.getPhone();
         else
             throw new ContactDoesNotExistException();
     }
 
     @Override
     public String getEmail(String name) throws ContactDoesNotExistException {
-        if (has_Contact(name))
-            return this.getContact(name).getEmail();
+        Contact c = this.getContact(name);
+        if (c != null)
+            return c.getEmail();
         else
             throw new ContactDoesNotExistException();
     }
 
     @Override
     public void setPhone(String name, int phone) throws ContactDoesNotExistException {
-        if (has_Contact(name))
-            this.getContact(name).setPhone(phone);
+        Contact c = this.getContact(name);
+        if (c != null)
+            c.setPhone(phone);
         else
             throw new ContactDoesNotExistException();
     }
 
     @Override
     public void setEmail(String name, String email) throws ContactDoesNotExistException {
-        if (has_Contact(name))
-            this.getContact(name).setEmail(email);
+        Contact c = this.getContact(name);
+        if (c != null)
+            c.setEmail(email);
         else
             throw new ContactDoesNotExistException();
     }
@@ -84,7 +90,7 @@ public class ContactBookInList implements ContactBook {
 
     /**
      * @param name The contact name to lookup in the list
-     * @return the <code>name</code> of the contact, if it exists,
+     * @return the <code>contact</code> if it exists,
      * otherwise <code>null</code>
      */
     private Contact getContact(String name) {
