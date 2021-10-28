@@ -90,8 +90,8 @@ public class ContactBookInList implements ContactBook {
 
     /**
      * @param name The contact name to lookup in the list
-     * @return the <code>contact</code> if it exists,
-     * otherwise <code>null</code>
+     * @return the contact with the given name if it exists,
+     * otherwise null
      */
     private Contact getContact(String name) {
         for (Contact c: contacts)
