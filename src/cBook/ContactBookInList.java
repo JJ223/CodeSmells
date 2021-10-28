@@ -16,7 +16,7 @@ public class ContactBookInList implements ContactBook {
      * Default constructor
      */
     public ContactBookInList() {
-        contacts = new LinkedList<Contact>();
+        contacts = new LinkedList<>();
     }
 
     @Override
