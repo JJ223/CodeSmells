@@ -130,8 +130,7 @@ public class Main {
      * @param cBook ContactBook in which one wants to remove the contact.
      */
     private static void deleteContact(Scanner in, ContactBook cBook) {
-        String name;
-        name = in.nextLine();
+        String name = in.nextLine();
         try {
             cBook.deleteContact(name);
             System.out.println(CONTACT_REMOVED);
@@ -146,8 +145,7 @@ public class Main {
      * @param cBook ContactBook from which we want to fetch the phone number.
      */
     private static void getPhone(Scanner in, ContactBook cBook) {
-        String name;
-        name = in.nextLine();
+        String name = in.nextLine();
         try {
             System.out.println(cBook.getPhone(name));
         } catch (ContactDoesNotExistException e) {
@@ -161,8 +159,7 @@ public class Main {
      * @param cBook ContactBook from which we want to fetch the email address.
      */
     private static void getEmail(Scanner in, ContactBook cBook) {
-        String name;
-        name = in.nextLine();
+        String name = in.nextLine();
         try {
             System.out.println(cBook.getEmail(name));
         } catch (ContactDoesNotExistException e) {
@@ -177,9 +174,8 @@ public class Main {
      */
     private static void setPhone(Scanner in, ContactBook cBook) {
         try {
-            String name;
+            String name = in.nextLine();
             int phone;
-            name = in.nextLine();
             try {
                 phone = in.nextInt();
                 in.nextLine();
@@ -202,10 +198,8 @@ public class Main {
      * @param cBook ContactBook in which we want to update the email address.
      */
     private static void setEmail(Scanner in, ContactBook cBook) {
-        String name;
-        String email;
-        name = in.nextLine();
-        email = in.nextLine();
+        String name = in.nextLine();
+        String email = in.nextLine();
         try {
             cBook.setEmail(name,email);
             System.out.println(CONTACT_UPDATED);
