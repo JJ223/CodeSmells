@@ -114,13 +114,13 @@ public class Main {
             in.nextLine();
             String email = in.nextLine();
             cBook.addContact(name, phone, email);
-            System.out.println(Main.CONTACT_ADDED);
+            System.out.println(CONTACT_ADDED);
         } catch (InputMismatchException e) {
             System.out.println(NOT_A_VALID_PHONE_NUMBER);
             in.nextLine();
             in.nextLine();
         } catch (ContactAlreadyExistsException e) {
-            System.out.println(e.getMessage());
+            System.out.println(CONTACT_EXISTS);
         }
     }
 
@@ -134,9 +134,9 @@ public class Main {
         name = in.nextLine();
         try {
             cBook.deleteContact(name);
-            System.out.println(Main.CONTACT_REMOVED);
+            System.out.println(CONTACT_REMOVED);
         } catch (ContactDoesNotExistException e) {
-            System.out.println(Main.NAME_NOT_EXIST);
+            System.out.println(NAME_NOT_EXIST);
         }
     }
 
@@ -151,7 +151,7 @@ public class Main {
         try {
             System.out.println(cBook.getPhone(name));
         } catch (ContactDoesNotExistException e) {
-            System.out.println(Main.NAME_NOT_EXIST);
+            System.out.println(NAME_NOT_EXIST);
         }
     }
 
@@ -166,7 +166,7 @@ public class Main {
         try {
             System.out.println(cBook.getEmail(name));
         } catch (ContactDoesNotExistException e) {
-            System.out.println(Main.NAME_NOT_EXIST);
+            System.out.println(NAME_NOT_EXIST);
         }
     }
 
@@ -184,12 +184,12 @@ public class Main {
                 phone = in.nextInt();
                 in.nextLine();
                 cBook.setPhone(name, phone);
-                System.out.println(Main.CONTACT_UPDATED);
+                System.out.println(CONTACT_UPDATED);
             } catch (InputMismatchException e) {
                 in.nextLine();
-                System.out.println(Main.NOT_A_VALID_PHONE_NUMBER);
+                System.out.println(NOT_A_VALID_PHONE_NUMBER);
             } catch (ContactDoesNotExistException e) {
-                System.out.println(Main.NAME_NOT_EXIST);
+                System.out.println(NAME_NOT_EXIST);
             }
         } catch (InputMismatchException e) {
             System.out.println(e.getMessage());
@@ -208,9 +208,9 @@ public class Main {
         email = in.nextLine();
         try {
             cBook.setEmail(name,email);
-            System.out.println(Main.CONTACT_UPDATED);
+            System.out.println(CONTACT_UPDATED);
         } catch (ContactDoesNotExistException e) {
-            System.out.println(Main.NAME_NOT_EXIST);
+            System.out.println(NAME_NOT_EXIST);
         }
     }
 
@@ -224,6 +224,6 @@ public class Main {
             while(it.hasNext())
                 System.out.println(it.next());
         }
-        else System.out.println(Main.BOOK_EMPTY);
+        else System.out.println(BOOK_EMPTY);
     }
 }
