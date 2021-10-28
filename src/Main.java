@@ -45,13 +45,13 @@ public class Main {
      * @param args - arguments for executing the program. Not used in this program.
      */
     public static void main(String[] args) {
-        Main.execute_commands();
+        executeCommands();
     }
 
     /**
      * Command interpreter.
      */
-    private static void execute_commands() {
+    private static void executeCommands() {
         Scanner in = new Scanner(System.in);
         ContactBook cBook = new ContactBookInList();
         Command comm = readCommand(in);
