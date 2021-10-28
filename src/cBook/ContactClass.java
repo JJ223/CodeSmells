@@ -3,11 +3,11 @@ package cBook;
 /**
  * By removing the public visibility, this class is no longer visible outside the package
  */
-public class ContactClass implements Contact {
+class ContactClass implements Contact {
     /**
      * Contact name.
      */
-    private String name;
+    private final String name;
 
     /**
      * Contact phone number.
@@ -30,7 +30,7 @@ public class ContactClass implements Contact {
 
     /**
      * Constructor with just the name. Leaves the phone number at 0, and the email address to null.
-     * @param name
+     * @param name : name of contact
      */
     public ContactClass(String name) {
         this(name, 0, null);
@@ -61,7 +61,6 @@ public class ContactClass implements Contact {
         this.email = email;
     }
 
-    @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
 

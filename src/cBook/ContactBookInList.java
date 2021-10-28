@@ -10,7 +10,7 @@ public class ContactBookInList implements ContactBook {
     /**
      * A collection of contacts.
      */
-    List<Contact> contacts;
+    private List<Contact> contacts;
 
     /**
      * Default constructor
@@ -39,10 +39,12 @@ public class ContactBookInList implements ContactBook {
 
     @Override
     public void deleteContact(String name) throws ContactDoesNotExistException {
-        if (has_Contact(name))
-            contacts.remove(new ContactClass(name));
-        else
+        if (has_Contact(name)) {
+            Contact c = this.getContact(name);
+            contacts.remove(c);
+        } else {
             throw new ContactDoesNotExistException();
+        }
     }
 
     @Override
