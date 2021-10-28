@@ -3,7 +3,7 @@ package cBook;
 /**
  * By removing the public visibility, this class is no longer visible outside the package
  */
-class ContactClass implements Contact {
+public class ContactClass implements Contact {
     /**
      * Contact name.
      */
