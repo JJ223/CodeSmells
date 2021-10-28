@@ -1,4 +1,4 @@
-package cBook;
+package cbook;
 
 import java.util.Iterator;
 import exceptions.ContactAlreadyExistsException;
