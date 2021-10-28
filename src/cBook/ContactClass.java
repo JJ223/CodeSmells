@@ -61,6 +61,7 @@ class ContactClass implements Contact {
         this.email = email;
     }
 
+    @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
 
@@ -76,5 +77,6 @@ class ContactClass implements Contact {
         }
         else return name.equals(other.getName());
     }
+
 
 }
