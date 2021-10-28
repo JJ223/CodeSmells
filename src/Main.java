@@ -14,14 +14,14 @@ public class Main {
     private static final String NOT_A_VALID_PHONE_NUMBER = "Not a valid phone number.";
 
     // Constants for defining the user feedback
-    public static final String CONTACT_EXISTS = "Contact already exists.";
-    public static final String NAME_NOT_EXIST = "Contact does not exist.";
-    public static final String CONTACT_ADDED = "Contact added.";
-    public static final String CONTACT_REMOVED = "Contact removed.";
-    public static final String CONTACT_UPDATED = "Contact updated.";
-    public static final String BOOK_EMPTY = "Contact book empty.";
-    public static final String ERROR = "Unknown command.";
-    public static final String EXIT = "Goodbye!";
+    private static final String CONTACT_EXISTS = "Contact already exists.";
+    private static final String NAME_NOT_EXIST = "Contact does not exist.";
+    private static final String CONTACT_ADDED = "Contact added.";
+    private static final String CONTACT_REMOVED = "Contact removed.";
+    private static final String CONTACT_UPDATED = "Contact updated.";
+    private static final String BOOK_EMPTY = "Contact book empty.";
+    private static final String ERROR = "Unknown command.";
+    private static final String EXIT = "Goodbye!";
 
     // Enumeration for defining Commands
     private enum Command {
