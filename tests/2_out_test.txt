@@ -1,0 +1,41 @@
+Contact book empty.
+
+Contact added.
+
+Contact already exists.
+
+Contact added.
+
+Not a valid phone number.
+
+Contact removed.
+
+Contact added.
+
+99999999
+
+Contact does not exist.
+
+Joana@fct.unl.pt
+
+Contact does not exist.
+
+Contact updated.
+
+Not a valid phone number.
+
+Contact does not exist.
+
+253253253
+
+Contact updated.
+
+Contact does not exist.
+
+JoanaEu@tu.ele.pt
+
+Joana Horas; Joana@gmail.com; 91999999
+Joana Dias; JoanaEu@tu.ele.pt; 253253253
+
+Goodbye!
+
