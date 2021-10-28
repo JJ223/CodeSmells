@@ -79,6 +79,7 @@ public class Main {
                     listAllContacts(cBook);
                     break;
                 default:
+                    System.out.println(ERROR);
             }
             System.out.println();
             comm = readCommand(in);
