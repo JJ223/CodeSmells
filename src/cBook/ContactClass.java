@@ -78,8 +78,4 @@ class ContactClass implements Contact {
         else return name.equals(other.getName());
     }
 
-    @Override
-    public String toString() {
-        return getName() + "; " + email + "; " + getPhone();
-    }
 }
