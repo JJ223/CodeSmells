@@ -28,14 +28,6 @@ class ContactClass implements Contact {
         this.email = email;
     }
 
-    /**
-     * Constructor with just the name. Leaves the phone number at 0, and the email address to null.
-     * @param name : name of contact
-     */
-    public ContactClass(String name) {
-        this(name, 0, null);
-    }
-
     @Override
     public String getName() {
         return name;

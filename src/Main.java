@@ -31,14 +31,14 @@ public class Main {
 
         private final String commandInputName;
 
-        private Command(String commandInputName) {
+        Command(String commandInputName) {
             this.commandInputName = commandInputName;
         }
 
         public String getCommandInputName() {
             return commandInputName;
         }
-    };
+    }
 
     /**
      * Main program. Runs the command interpreter.

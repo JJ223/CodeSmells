@@ -10,7 +10,7 @@ public class ContactBookInList implements ContactBook {
     /**
      * A collection of contacts.
      */
-    private List<Contact> contacts;
+    private final List<Contact> contacts;
 
     /**
      * Default constructor

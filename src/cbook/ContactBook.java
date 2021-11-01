@@ -18,7 +18,7 @@ public interface ContactBook {
      * Returns the number of existing contacts
      * @return the number of existing contacts
      */
-    public int getNumberOfContacts();
+    int getNumberOfContacts();
 
     /**
      * Adds a new contact to the contact book
