@@ -12,7 +12,7 @@ public interface ContactBook {
      * @return <code>true</code> if the contact with <code>name</code> exists,
      * <code>false</code> otherwise
      */
-    boolean has_Contact(String name);
+    boolean hasContact(String name);
 
     /**
      * Returns the number of existing contacts
