@@ -20,7 +20,7 @@ public class ContactBookInList implements ContactBook {
     }
 
     @Override
-    public boolean has_Contact(String name) {
+    public boolean hasContact(String name) {
         return this.getContact(name) != null;
     }
 
@@ -31,7 +31,7 @@ public class ContactBookInList implements ContactBook {
 
     @Override
     public void addContact(String name, int phone, String email) throws ContactAlreadyExistsException {
-        if (has_Contact(name))
+        if (hasContact(name))
             throw new ContactAlreadyExistsException();
         else
             contacts.add(new ContactClass(name, phone, email));
@@ -39,7 +39,7 @@ public class ContactBookInList implements ContactBook {
 
     @Override
     public void deleteContact(String name) throws ContactDoesNotExistException {
-        if (has_Contact(name)) {
+        if (hasContact(name)) {
             Contact c = this.getContact(name);
             contacts.remove(c);
         } else {
