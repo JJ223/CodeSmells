@@ -36,7 +36,7 @@ public class RunAllTests {
     /**
      * Testa os comandos help e exit.
      */
-    @Test public void test01() { test("1_in_test.txt","1_out_test.txt"); }
+    public void test01() { test("1_in_test.txt","1_out_test.txt"); }
     /**
      * Testa o comando new com a opcao open.
      */

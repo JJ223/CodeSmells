@@ -215,8 +215,10 @@ public class Main {
     private static void listAllContacts(ContactBook cBook) {
         if (cBook.getNumberOfContacts() != 0) {
             java.util.Iterator<Contact> it = cBook.listContacts();
-            while(it.hasNext())
-                System.out.println(it.next());
+            while(it.hasNext()) {
+                Contact c = it.next();
+                System.out.println(c.getName() + "; " + c.getEmail() + "; " + c.getPhone());
+            }
         }
         else System.out.println(BOOK_EMPTY);
     }
